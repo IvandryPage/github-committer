@@ -68,11 +68,8 @@ int main() {
       
       std::system(command.c_str());
       std::cout << "Committed at " << formattedDate << "\n";
-      if (i % 30 == 0 || i % 31 == 0) {
-        std::system("git push origin main");
-        std::this_thread::sleep_for(std::chrono::seconds(120));
-      }
     }
   }
-
+  
+  std::system("git push origin main");
 }
